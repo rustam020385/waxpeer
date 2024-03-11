@@ -3,6 +3,7 @@
         class="card-item h-100"
         :class="{
             'card-item-colored': item.title != 'Waxpeer online & status',
+            'card-item-big': item.title == 'Waxpeer online & status'
         }"
     >
         <div class="d-flex flex-column justify-space-between h-100">
@@ -11,9 +12,9 @@
                 <my-subtitle :text="item.subtitle"></my-subtitle>
             </div>
 
-            <div class="d-flex justify-end align-center">
+            <div class="d-flex justify-end align-center" :class="item.text.length > 1 ? 'mt-8': ''">
                 <div class="pl-3">
-                    <v-row align="end" class="mt-4 mt-xl-0">
+                    <v-row align="end" class="mt-xl-0">
                         <v-col
                             v-for="(text, index) in item.text"
                             :key="text"
@@ -73,6 +74,10 @@ export default defineComponent({
     border-radius: 8px;
     position: relative;
     min-height: 200px;
+}
+
+.card-item-big {
+    padding: 1rem 1.5rem 2rem 1.5rem;
 }
 
 .card-item-colored {

@@ -25,7 +25,7 @@ export default defineComponent({
     position: absolute;
     right: 0;
     top: 50%;
-    margin-top: -100px;
+    margin-top: -80px;
 }
 
 #wrap {
@@ -87,6 +87,7 @@ export default defineComponent({
 @media screen and (min-width: 960px) {
     #wrap {
         margin-left: -260px;
+        margin-top: -25px;
     }
 }
 
