@@ -17,6 +17,9 @@
                     <template v-else-if="item.title == 'Current date'">
                         <my-subtitle :text="time" class="ml-auto"></my-subtitle>
                     </template>
+                    <template v-else-if="item.title == 'Withdrawal status'">
+                        <MySubtracts class="ml-auto" />
+                    </template>
                 </template>
             </single-item>
         </v-col>
@@ -29,6 +32,7 @@ import SingleItem from "./SingleItem.vue";
 import moment from 'moment'
 import MyChart from "./MyChart.vue";
 import MySphere from "./MySphere.vue";
+import MySubtracts from "./MySubtracts.vue";
 
 const date = new Date()
 
@@ -36,7 +40,8 @@ export default defineComponent({
     components: {
         SingleItem,
         MyChart,
-        MySphere
+        MySphere,
+        MySubtracts
     },
     props: {
         items: {

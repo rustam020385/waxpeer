@@ -13,7 +13,7 @@
             </div>
 
             <div class="d-flex justify-end align-center" :class="item.text.length > 1 ? 'mt-8': ''">
-                <div class="pl-3">
+                <div class="pl-3" v-if="item.text.length">
                     <v-row align="end" class="mt-xl-0">
                         <v-col
                             v-for="(text, index) in item.text"
